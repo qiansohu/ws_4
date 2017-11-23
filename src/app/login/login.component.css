@@ -1,0 +1,30 @@
+.login-logo{
+  font: 楷体;
+  font-size: 30px;
+  /*background-image: url("");*/
+}
+.login-logo b{
+  font: "Adobe 宋体 Std L";
+  font-size: 40px;
+}
+.logo-img  {
+  padding-bottom: 20px;
+}
+.glyphicon {
+  padding-right: 15px;
+
+}
+.col-xs-3 {
+  padding-top: 15px;
+  text-align: right;
+  padding-right: 0px;
+}
+.password_error{
+  text-align: center;
+  color: red;
+}
+
+.login-box-msg{
+  text-align: right;
+}
+

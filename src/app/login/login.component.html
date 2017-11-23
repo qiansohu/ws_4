@@ -1,0 +1,53 @@
+<div class="login-box">
+  <div class="login-logo">
+    <img class="logo-img" src="../../assets/img/henue_logo.png" width="62" height="72">
+    <a href="*"  ><b>股市三碗面</b>恭候您</a>
+  </div>
+  <!-- /.login-logo -->
+  <div class="login-box-body">
+    <p class="login-box-msg">请输入您的用户名密码，登录"三碗面网站"</p>
+    <label class="col-xs-12  password_error"   [hidden]="!passwordIsError">用户名或密码不匹配,请重新输入!</label>
+    <form  (ngSubmit)="login()" name="loginUserform" #loginForm="ngForm">
+      <div class="col-xs-3" >用户名:</div>
+      <div class="col-xs-9 form-group has-feedback">
+        <input [(ngModel)]="loginUser.userId" name="userId"  required  #userId="ngModel" type="email" class="form-control" placeholder="Email" >
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+       <!-- <button [hidden]="userId.valid || userId.pristine" type="button" class="btn btn-block btn-danger btn-sm">Danger</button>-->
+      </div>
+      <div class="col-xs-3">密码:</div>
+      <div class="col-xs-9 form-group has-feedback">
+        <input [(ngModel)]="loginUser.password" name="password"  type="password" required class="form-control" placeholder="Password">
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+      </div>
+      <div class="row">
+        <div class="col-xs-8">
+          <div class="checkbox icheck">
+            <label>
+              <input type="checkbox"> 记住我输入的用户名
+            </label>登录
+          </div>
+        </div>
+        <!-- /.col -->
+        <div class="col-xs-4">
+          <button type="submit" [disabled]="!loginForm.form.valid"   class="btn btn-primary btn-block btn-flat">登录</button>
+        </div>
+
+        <!-- /.col -->
+      </div>
+    </form>
+
+    <!--<div class="social-auth-links text-center">-->
+      <!--<p>- OR -</p>-->
+      <!--<a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using-->
+        <!--Facebook</a>-->
+      <!--<a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using-->
+        <!--Google+</a>-->
+    <!--</div>-->
+    <!-- /.social-auth-links -->
+
+    <a href="#">找回我的密码</a><br>
+    <a href="./buyAccount" class="text-center">我还没有用户名密码</a>
+
+  </div>
+  <!-- /.login-box-body -->
+</div>
